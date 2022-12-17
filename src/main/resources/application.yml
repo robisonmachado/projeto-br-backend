@@ -1,0 +1,43 @@
+## old file name: application.properties
+## datasource
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: admin
+    password: admin
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+  ## pretty json response
+  jackson:
+    serialization:
+      indent-output: true
+  gson:
+    pretty-printing: true
+
+
+## application
+server:
+  port: 8080
+  servlet:
+    context-path: /v1
+  error:
+    include-stacktrace: ON_PARAM
+
+## logging
+logging:
+  file:
+    path: .
+    name: projeto-br-backend.log
+  level:
+    root:
+
+# swagger-ui custom path
+#springdoc:
+#  swagger-ui:
+#    path: swagger-ui
+
+
+
